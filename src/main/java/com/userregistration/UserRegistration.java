@@ -5,7 +5,7 @@ public class UserRegistration {
         System.out.println("Welcome To User Registration");
     }
 
-    public boolean validateFirstName(String firstName) {
-        return firstName.matches(VALID_NAME);
+    public boolean validateName(String name) {
+        return name.matches(VALID_NAME);
     }
 }
