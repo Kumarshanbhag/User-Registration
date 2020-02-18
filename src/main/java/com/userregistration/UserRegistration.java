@@ -16,7 +16,7 @@ public class UserRegistration {
         return name.matches(VALID_NAME);
     }
 
-    public boolean validateEmail(String email) {
+    public static boolean validateEmail(String email) {
         return email.matches(VALID_EMAIL);
     }
 
