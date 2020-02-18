@@ -89,4 +89,16 @@ public class UserRegistrationTest {
         boolean password=userValidate.validatePassword("Kumarshanbhag",UserRegistration.VALID_PASSWORD_WITH_ATLEAST_ONE_NUMBER);
         Assert.assertFalse("true",password);
     }
+
+    @Test
+    public void givenPasswordExactly1SpecialCharacter_WhenProper_ShouldReturnTrue() {
+        boolean password=userValidate.validatePassword("Kumar@302",UserRegistration.VALID_PASSWORD_WITH_EXACTLY_ONE_SPECIAL_CHARACTER);
+        Assert.assertTrue("true",password);
+    }
+
+    @Test
+    public void givenPasswordExactly1Character_WhenNotProper_ShouldReturnTrue() {
+        boolean password=userValidate.validatePassword("Kumarshanbhag302",UserRegistration.VALID_PASSWORD_WITH_EXACTLY_ONE_SPECIAL_CHARACTER);
+        Assert.assertFalse("true",password);
+    }
 }
