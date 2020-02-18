@@ -77,4 +77,16 @@ public class UserRegistrationTest {
         boolean password=userValidate.validatePassword("kumarshanbhag",UserRegistration.VALID_PASSWORD_WITH_ATLEAST_ONE_UPPER_CASE);
         Assert.assertFalse("true",password);
     }
+
+    @Test
+    public void givenPasswordAtleast1Number_WhenProper_ShouldReturnTrue() {
+        boolean password=userValidate.validatePassword("Kumarshanbhag302",UserRegistration.VALID_PASSWORD_WITH_ATLEAST_ONE_NUMBER);
+        Assert.assertTrue("true",password);
+    }
+
+    @Test
+    public void givenPasswordAtleast1Number_WhenNotProper_ShouldReturnTrue() {
+        boolean password=userValidate.validatePassword("Kumarshanbhag",UserRegistration.VALID_PASSWORD_WITH_ATLEAST_ONE_NUMBER);
+        Assert.assertFalse("true",password);
+    }
 }
