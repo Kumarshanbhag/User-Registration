@@ -53,4 +53,17 @@ public class UserRegistrationTest {
         boolean mobile = userValidate.validateMobile("919745632145");
         Assert.assertFalse("true",mobile);
     }
+
+    @Test
+    public void givenPasswordMinimumEightCharacters_WhenProper_ShouldReturnTrue() {
+        boolean password=userValidate.validatePassword("kumarshanbhag",UserRegistration.VALID_PASSWORD_WITH_MINIMUM_EIGHT_CHARACTER);
+        Assert.assertTrue("true",password);
+    }
+
+    @Test
+    public void givenPasswordMinimumEightCharacters_WhenNotProper_ShouldReturnTrue() {
+        boolean password=userValidate.validatePassword("kumar",UserRegistration.VALID_PASSWORD_WITH_MINIMUM_EIGHT_CHARACTER);
+        Assert.assertFalse("true",password);
+    }
+
 }
