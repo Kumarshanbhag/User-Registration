@@ -1,0 +1,59 @@
+[1mdiff --git a/src/test/java/com/userregistration/UserRegistrationTest.java b/src/test/java/com/userregistration/UserRegistrationTest.java[m
+[1mindex d1b21d5..de1c5ad 100644[m
+[1m--- a/src/test/java/com/userregistration/UserRegistrationTest.java[m
+[1m+++ b/src/test/java/com/userregistration/UserRegistrationTest.java[m
+[36m@@ -4,40 +4,41 @@[m [mimport org.junit.Assert;[m
+ import org.junit.Test;[m
+ [m
+ public class UserRegistrationTest {[m
+[31m-    UserRegistration userValidate=new UserRegistration();[m
+[32m+[m[32m    UserRegistration userValidate = new UserRegistration();[m
+[32m+[m
+     @Test[m
+     public void givenFirstName_WhenProper_ShouldReturnTrue() {[m
+[31m-        boolean firstName=userValidate.validateName("Kumar");[m
+[31m-        Assert.assertTrue("true",firstName);[m
+[32m+[m[32m        boolean firstName = userValidate.validateName("Kumar");[m
+[32m+[m[32m        Assert.assertTrue("true", firstName);[m
+     }[m
+ [m
+     @Test[m
+     public void givenFirstName_WhenNotProper_ShouldReturnFalse() {[m
+[31m-        boolean firstName=userValidate.validateName("kumar");[m
+[31m-        Assert.assertFalse("true",firstName);[m
+[32m+[m[32m        boolean firstName = userValidate.validateName("kumar");[m
+[32m+[m[32m        Assert.assertFalse("true", firstName);[m
+     }[m
+ [m
+     @Test[m
+     public void givenLastName_WhenProper_ShouldReturnTrue() {[m
+[31m-        boolean lastName=userValidate.validateName("Shanbhag");[m
+[31m-        Assert.assertTrue("true",lastName);[m
+[32m+[m[32m        boolean lastName = userValidate.validateName("Shanbhag");[m
+[32m+[m[32m        Assert.assertTrue("true", lastName);[m
+     }[m
+ [m
+     @Test[m
+     public void givenLastName_WhenNotProper_ShouldReturnFalse() {[m
+[31m-        boolean lastName=userValidate.validateName("shanbhag");[m
+[31m-        Assert.assertFalse("true",lastName);[m
+[32m+[m[32m        boolean lastName = userValidate.validateName("shanbhag");[m
+[32m+[m[32m        Assert.assertFalse("true", lastName);[m
+     }[m
+ [m
+     @Test[m
+     public void givenEmail_WhenProperShould_ReturnTrue() {[m
+[31m-        boolean email=userValidate.validateEmail("abc.xyz@bl.co.in");[m
+[31m-        Assert.assertTrue("true",email);[m
+[32m+[m[32m        boolean email = userValidate.validateEmail("abc.xyz@bl.co.in");[m
+[32m+[m[32m        Assert.assertTrue("true", email);[m
+     }[m
+ [m
+     @Test[m
+     public void givenEmail_WhenNotProperShould_ReturnTrue() {[m
+[31m-        boolean email=userValidate.validateEmail("abc..2002@gmail.com");[m
+[31m-        Assert.assertFalse("true",email);[m
+[32m+[m[32m        boolean email = userValidate.validateEmail("abc..2002@gmail.com");[m
+[32m+[m[32m        Assert.assertFalse("true", email);[m
+     }[m
+ }[m
